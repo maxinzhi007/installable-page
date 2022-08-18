@@ -1,0 +1,15 @@
+div {
+    width: 100%;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+}
+
+p {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
