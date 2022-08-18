@@ -9,7 +9,7 @@ window.addEventListener("beforeinstallprompt", (e) => {
     derredprompt = e;
 })
 
-const button = document.querySelement('button');
+const button = document.querySelector('button');
 button.addEventListener("click", async() => {
     derredprompt.prompt();
     derredprompt = null;
