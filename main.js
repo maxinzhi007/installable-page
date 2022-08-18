@@ -9,6 +9,7 @@ window.addEventListener("beforeinstallprompt", (e) => {
     if(button.classList.contains("hidden")) {
         button.classList.remove("hidden");
     }
+    derferprompt = e;
 })
 
 button.addEventListener("click", () => {
