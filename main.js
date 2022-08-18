@@ -2,23 +2,16 @@ if("serviceWorker" in navigator) {
     navigator.serviceWorker.register('./sw.js');
 }
 
-let deferprompt;
+const button = document.querySelector('button');
+let derferprompt;
 
-const button = document.querySelector('.install');
-
-window.addEventListener('beforeinstallprompt', (e) => {
-    const timer = setInterval(() => {
-        console.log('正在抓取beforeinstallprompt中...');
-        if(e) {
-            console.log('抓到它了！！！');
-            deferprompt = e;
-            button.classList.toggle('hidden');
-            clearInterval(timer);
-        }
-    }, 1000)
+window.addEventListener("beforeinstallprompt", (e) => {
+    if(button.classList.contains("hidden")) {
+        button.classList.remove("hidden");
+    }
 })
 
-button.addEventListener('click', () => {
-    deferprompt.prompt();
-    deferprompt = null;
+button.addEventListener("click", () => {
+    derferprompt.prompt();
+    derferprompt = null;
 })
