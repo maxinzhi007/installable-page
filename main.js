@@ -2,7 +2,7 @@ if("serviceWorker" in navigator) {
     navigator.serviceWorker.register('./sw.js');
 }
 
-let derredprompt;
+var derredprompt;
 
 window.addEventListener("beforeinstallprompt", (e) => {
     e.preventDefault();
@@ -11,6 +11,7 @@ window.addEventListener("beforeinstallprompt", (e) => {
 
 const button = document.querySelector('button');
 button.addEventListener("click", async() => {
-    derredprompt.prompt();
+    let nice = derredprompt;
+    await nice.prompt();
     derredprompt = null;
 });
